@@ -2,6 +2,28 @@ $('#start').on('click',function(){
     game.start();
 })
 
+// Audio Setup
+
+    // Create an audio element with JavaScript
+    var audioElement = document.createElement("audio");
+
+    // Set its source to the location of Bach song fil
+    audioElement.setAttribute("src", "assets/images/bach_bwv1002_jh_3_corrente.mp3");
+
+    // Theme Button
+    $(".theme-button").on("click", function() {
+    audioElement.play();
+    });
+
+    // Pause Button
+    $(".pause-button").on("click", function() {
+    audioElement.pause();
+    });
+
+
+
+// Global Variables (accessible by all functions)
+
 var questions =[{
     question: "What's another name for violin?",
     answers:["Rat drum","Fiddle","Viola", "Violette"],
@@ -36,6 +58,7 @@ var questions =[{
     correctAnswer: "Italy"
 }];
 
+// Game counters and FUNCTIONS 
 var game = {
     correct: 0,
     incorrect: 0,
@@ -62,4 +85,18 @@ var game = {
     done: function(){
         $.each($('input[name="question-1]":checked'))
     }
+}
+
+// MAIN PROCESS
+
+// Start the Game
+
+// Initiate the function for capturing key clicks.
+document.onkeyup = function(event) {
+
+    // step 1
+    // another
+    // another
+    // End game and reset all
+
 }

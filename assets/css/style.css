@@ -35,5 +35,26 @@
     .col-12 {width: 100%;}
   }
 
+.jumbotron {
+    min-height: 120px;
+}
 
-font-family: 'Nunito Sans', sans-serif;
+body {
+    background-image: url(../images/violin.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 75%;
+    background-color: lightgrey;
+}
+
+h1 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.wrapper {
+    text-align: right;
+}
