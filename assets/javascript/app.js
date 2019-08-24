@@ -76,14 +76,20 @@ var game = {
         $('#subwrapper').prepend('<h2>Time Remaining: <span id="counter">120</span> Seconds</h2>');
         $('#start'.remove());
         for(var i=0;i<questions.length;i++){
-        $('#subwrapper').append('<h2>'+questions[i].question+'</h2)');
-        for(var j=0;j<questions[i].answers.length;j++){
-            $("#subwrapper").append("<input type='radio' name='question-" +i+ "' value='"+questions[i].answers[j]+" ' > " +questions[i].answers[j])
+            $('#subwrapper').append('<h2>'+questions[i].question+'</h2)');
+            for(var j=0;j<questions[i].answers.length;j++){
+                $("#subwrapper").append("<input type='radio' name='question-" +i+ "' value='"+questions[i].answers[j]+" ' > " +questions[i].answers[j])
+            }
         }
-    }
     },
     done: function(){
-        $.each($('input[name="question-1]":checked'))
+        $.each($('input[name="question-1]":checked'),function(){
+            if($(this).val()==questions[1].correctAnswer){
+                game.correct++;
+            } else {
+                game.incorrect++;
+            }
+        })
     }
 }
 

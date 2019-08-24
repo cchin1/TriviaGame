@@ -37,6 +37,7 @@
 
 .jumbotron {
     min-height: 120px;
+    max-width: 35x;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
     background-attachment: fixed;
     background-size: 75%;
     background-color: lightgrey;
+    filter: opacity(70%);
 }
 
 h1 {

@@ -12,7 +12,7 @@ Watch the demo.  https://www.youtube.com/watch?v=fBIj8YsA9dk&feature=youtu.be
 
 Here's how the game works:
 
-The player interacts with the classical music trivia form with multiple choice or true/false options.
+The player interacts with the classical violin trivia form with multiple choice options.
 
 The player is only allowed to pick one answer per question.
 
