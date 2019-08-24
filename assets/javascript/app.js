@@ -29,35 +29,35 @@ $(document).on('click','#end',function(){
 var questions =[{
     question: "What's another name for violin?",
     answers:[" Rat drum  "," Fiddle  "," Viola  ", " Violette  "],
-    correctAnswer: "Fiddle"
+    correctAnswer: " Fiddle  "
 }, {
     question: "What do you use to tune the violin when it is VERY out of tune?",
     answers:[" Pegs "," Fine Tuner "," Hammer "],
-    correctAnswer: "Pegs"
+    correctAnswer: " Pegs "
 }, {
     question: "Which is a position on the violin?",
     answers:[" Flat position "," Half position "," Lotus position "],
-    correctAnswer: "Half position"
+    correctAnswer: " Half position "
 }, {
     question: "What note is the first finger on the E string?",
     answers:[" C "," F "," E1 "],
-    correctAnswer: "F"
+    correctAnswer: " F "
 }, {
     question: "How many violin pegs are there?",
     answers:[" Four "," Six "," Eight "],
-    correctAnswer: "Four"
+    correctAnswer: " Four "
 }, {
     question: "What does 'played with fingers' mean?",
     answers:[" Pizzao "," Palazzo "," Pizzicato "],
-    correctAnswer: "Pizzicato"
+    correctAnswer: " Pizzicato "
 }, {
     question: "When was the violin developed?",
     answers:[" 12th century "," 16th century "," 21st century "," 1900's "],
-    correctAnswer: "toy story"
+    correctAnswer: " 16th century "
 }, {
     question: "Where was the first violin used?",
     answers:[" Russia "," Italy "," Canada "],
-    correctAnswer: "Italy"
+    correctAnswer: " Italy "
 }];
 
 // Game counters and FUNCTIONS 
@@ -86,56 +86,56 @@ var game = {
         $('#subwrapper').append('<br><button id="end">Done</button>');
     },
     done: function(){
-        $.each($('input[name="question-0]":checked'),function(){
+        $.each($("input[name='question-0']:checked"),function(){
             if($(this).val()==questions[0].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-1]":checked'),function(){
+        $.each($("input[name='question-1']:checked"),function(){
             if($(this).val()==questions[1].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-2]":checked'),function(){
+        $.each($("input[name='question-2']:checked"),function(){
             if($(this).val()==questions[2].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-3]":checked'),function(){
+        $.each($("input[name='question-3']:checked"),function(){
             if($(this).val()==questions[3].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-4]":checked'),function(){
+        $.each($("input[name='question-4']:checked"),function(){
             if($(this).val()==questions[4].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-5]":checked'),function(){
+        $.each($("input[name='question-5']:checked"),function(){
             if($(this).val()==questions[5].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-6]":checked'),function(){
+        $.each($("input[name='question-6']:checked"),function(){
             if($(this).val()==questions[6].correctAnswer){
                 game.correct++;
             } else {
                 game.incorrect++;
             }
         });
-        $.each($('input[name="question-7]":checked'),function(){
+        $.each($("input[name='question-7']:checked"),function(){
             if($(this).val()==questions[7].correctAnswer){
                 game.correct++;
             } else {
@@ -152,8 +152,8 @@ var game = {
             $('#subwrapper h2').remove();
 
             $('#subwrapper').html("<h2>All done!</h2>");
-            $('#subwrapper').append("<h3>Correct Answers: =this.correct+</h3>");
-            $('#subwrapper').append("<h3>Incorrect Answers: =this.incorrect+</h3");
+            $('#subwrapper').append("<h3>Correct Answers: "+this.correct+"</h3>");
+            $('#subwrapper').append("<h3>Incorrect Answers: "+this.incorrect+"</h3");
             $('#subwrapper').append("<h3>Unanswered: "+(questions.length-(this.incorrect+this.correct))+"</h3>");
         }
     }
