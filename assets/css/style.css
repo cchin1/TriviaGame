@@ -41,7 +41,7 @@
 }
 
 body {
-    background-image: url(../images/Violin.jpg);
+    background-image: url(assets/images/Violin.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
