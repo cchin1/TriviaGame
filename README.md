@@ -1,6 +1,9 @@
 # TriviaGame
 For UW Coding Bootcamp 05-Week 02-HW: Basic Quiz (Timed Form)
 
+# Link
+https://cchin1.github.io/TriviaGame/
+
 ## Technologies Used
 HTML, CSS, Javascript, Bootstrap, jQuery
 
